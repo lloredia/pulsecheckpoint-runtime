@@ -1,0 +1,685 @@
+
+        <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .read-more {
+            color: #00f;
+        }
+
+        .bg-success-custom {
+            background-color: #98dea7 !important;
+        }
+
+        .bg-danger {
+            background-color: #f28484 !important;
+        }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- https://datatables.net/download/index with jQuery, DataTables, Buttons, SearchPanes, and Select //-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/v/dt/jqc-1.12.4/dt-1.10.25/b-1.7.1/sp-1.4.0/sl-1.3.3/datatables.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <style>
+        .show-read-more .more-text {
+            display: none;
+        }
+
+        .dataTable {
+            font-size: 14px;
+        }
+
+        .container-fluid {
+            font-size: 14px;
+        }
+
+        .float-left {
+            float: left !important;
+            max-width: 100%;
+        }
+    </style>
+    <title>Prowler - The Handy Cloud Security Tool</title>
+    </head>
+    <body>
+    <div class="container-fluid">
+        <div class="row mt-3">
+        <div class="col-md-4">
+            <a href=https://github.com/prowler-cloud/prowler/><img class="float-left card-img-left mt-4 mr-4 ml-4"
+                        src=https://user-images.githubusercontent.com/3985464/113734260-7ba06900-96fb-11eb-82bc-d4f68a1e2710.png
+                        alt="prowler-logo"></a>
+            <div class="card">
+            <div class="card-header">
+                Report Information
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-auto">
+                    <b>Version:</b> 3.11.3
+                    </div>
+                </div>
+                </li>
+                <li class="list-group-item">
+                <b>Parameters used:</b> aws
+                </li>
+                <li class="list-group-item">
+                <b>Date:</b> 2026-01-12T13:57:26.105139
+                </li>
+            </ul>
+            </div>
+        </div> 
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-header">
+                        AWS Assessment Summary
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <b>AWS Account:</b> 952995844826
+                        </li>
+                        <li class="list-group-item">
+                            <b>AWS-CLI Profile:</b> default
+                        </li>
+                        <li class="list-group-item">
+                            <b>Audited Regions:</b> All Regions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    AWS Credentials
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <b>User Id:</b> AIDA53YX2SLNO2KA6XMDV
+                        </li>
+                        <li class="list-group-item">
+                            <b>Caller Identity ARN:</b> arn:aws:iam::952995844826:user/cli-user
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+            <div class="card">
+                <div class="card-header">
+                    Assessment Overview
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <b>Total Findings:</b> 18
+                    </li>
+                    <li class="list-group-item">
+                        <b>Passed:</b> 0
+                    </li>
+                    <li class="list-group-item">
+                        <b>Failed:</b> 18
+                    </li>
+                    <li class="list-group-item">
+                        <b>Total Resources:</b> 1
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="row-mt-3">
+        <div class="col-md-12">
+            <table class="table compact stripe row-border ordering" id="findingsTable" data-order='[[ 5, "asc" ]]' data-page-length='100'>
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Status</th>
+                    <th scope="col">Severity</th>
+                    <th scope="col">Service Name</th>
+                    <th scope="col">Region</th>
+                    <th style="width:20%" scope="col">Check ID</th>
+                    <th style="width:20%" scope="col">Check Title</th>
+                    <th scope="col">Resource ID</th>
+                    <th scope="col">Resource Tags</th>
+                    <th scope="col">Status Extended</th>
+                    <th scope="col">Risk</th>
+                    <th scope="col">Recomendation</th>
+                    <th scope="col">Compliance</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>ap-northeast-1</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>ap-northeast-2</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>ap-northeast-3</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>ap-south-1</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>ap-southeast-1</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>ap-southeast-2</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>ca-central-1</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>eu-central-1</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>eu-north-1</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>eu-west-1</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>eu-west-2</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>eu-west-3</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>sa-east-1</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>us-east-1</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>us-east-2</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>us-west-1</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>low</td>
+                    <td>accessanalyzer</td>
+                    <td>us-west-2</td>
+                    <td>accessanalyzer<wbr>_enabled</td>
+                    <td>Check if IAM Access Analyzer is enabled</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>IAM Access Analyzer in account 952995844826 is not enabled.</td>
+                    <td><p class="show-read-more">AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.</p></td>
+                    <td><p class="show-read-more">Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost).</p> <a class="read-more" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 1.20
+
+&#x2022;CIS-1.5: 1.20
+
+&#x2022;CIS-2.0: 1.20
+</p></td>
+                </tr>
+                
+                <tr class="table-info">
+                    <td>INFO</td>
+                    <td>medium</td>
+                    <td>account</td>
+                    <td>us-east-1</td>
+                    <td>account<wbr>_maintain<wbr>_current<wbr>_contact<wbr>_details</td>
+                    <td>Maintain current contact details.</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>Manual check: Login to the AWS Console. Choose your account name on the top right of the window -&gt; My Account -&gt; Contact Information.</td>
+                    <td><p class="show-read-more">Ensure contact email and telephone details for AWS accounts are current and map to more than one individual in your organization. An AWS account supports a number of contact details; and AWS will use these to contact the account owner if activity judged to be in breach of Acceptable Use Policy. If an AWS account is observed to be behaving in a prohibited or suspicious manner; AWS will attempt to contact the account owner by email and phone using the contact details listed. If this is unsuccessful and the account behavior needs urgent mitigation; proactive measures may be taken; including throttling of traffic between the account exhibiting suspicious behavior and the AWS API endpoints and the Internet. This will result in impaired service to and from the account in question.</p></td>
+                    <td><p class="show-read-more">Using the Billing and Cost Management console complete contact details.</p> <a class="read-more" href="https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;AWS-Well-Architected-Framework-Security-Pillar: SEC03-BP03, SEC10-BP01
+
+&#x2022;CIS-1.4: 1.1
+
+&#x2022;CIS-1.5: 1.1
+
+&#x2022;CIS-2.0: 1.1
+
+&#x2022;ENS-RD2022: op.ext.7.aws.am.1
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>medium</td>
+                    <td>account</td>
+                    <td>us-east-1</td>
+                    <td>account<wbr>_maintain<wbr>_different<wbr>_contact<wbr>_details<wbr>_to<wbr>_security<wbr>_billing<wbr>_and<wbr>_operations</td>
+                    <td>Maintain different contact details to security, billing and operations.</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>SECURITY, BILLING and OPERATIONS contacts not found or they are not different between each other and between ROOT contact.</td>
+                    <td><p class="show-read-more">Ensure contact email and telephone details for AWS accounts are current and map to more than one individual in your organization. An AWS account supports a number of contact details; and AWS will use these to contact the account owner if activity judged to be in breach of Acceptable Use Policy. If an AWS account is observed to be behaving in a prohibited or suspicious manner; AWS will attempt to contact the account owner by email and phone using the contact details listed. If this is unsuccessful and the account behavior needs urgent mitigation; proactive measures may be taken; including throttling of traffic between the account exhibiting suspicious behavior and the AWS API endpoints and the Internet. This will result in impaired service to and from the account in question.</p></td>
+                    <td><p class="show-read-more">Using the Billing and Cost Management console complete contact details.</p> <a class="read-more" href="https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more"></p></td>
+                </tr>
+                
+                <tr class="table-info">
+                    <td>INFO</td>
+                    <td>medium</td>
+                    <td>account</td>
+                    <td>us-east-1</td>
+                    <td>account<wbr>_security<wbr>_contact<wbr>_information<wbr>_is<wbr>_registered</td>
+                    <td>Ensure security contact information is registered.</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>Manual check: Login to the AWS Console. Choose your account name on the top right of the window -&gt; My Account -&gt; Alternate Contacts -&gt; Security Section.</td>
+                    <td><p class="show-read-more">AWS provides customers with the option of specifying the contact information for accounts security team. It is recommended that this information be provided. Specifying security-specific contact information will help ensure that security advisories sent by AWS reach the team in your organization that is best equipped to respond to them.</p></td>
+                    <td><p class="show-read-more">Go to the My Account section and complete alternate contacts.</p> <a class="read-more" href="https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;AWS-Foundational-Security-Best-Practices: account, acm
+
+&#x2022;AWS-Well-Architected-Framework-Security-Pillar: SEC03-BP03, SEC10-BP01
+
+&#x2022;CIS-1.4: 1.2
+
+&#x2022;CIS-1.5: 1.2
+
+&#x2022;CIS-2.0: 1.2
+
+&#x2022;ENS-RD2022: op.ext.7.aws.am.1
+</p></td>
+                </tr>
+                
+                <tr class="table-info">
+                    <td>INFO</td>
+                    <td>medium</td>
+                    <td>account</td>
+                    <td>us-east-1</td>
+                    <td>account<wbr>_security<wbr>_questions<wbr>_are<wbr>_registered<wbr>_in<wbr>_the<wbr>_aws<wbr>_account</td>
+                    <td>Ensure security questions are registered in the AWS account.</td>
+                    <td>952995844826</td>
+                    <td></td>
+                    <td>Manual check: Login to the AWS Console as root. Choose your account name on the top right of the window -&gt; My Account -&gt; Configure Security Challenge Questions.</td>
+                    <td><p class="show-read-more">The AWS support portal allows account owners to establish security questions that can be used to authenticate individuals calling AWS customer service for support. It is recommended that security questions be established. When creating a new AWS account a default super user is automatically created. This account is referred to as the root account. It is recommended that the use of this account be limited and highly controlled. During events in which the root password is no longer accessible or the MFA token associated with root is lost/destroyed it is possible through authentication using secret questions and associated answers to recover root login access.</p></td>
+                    <td><p class="show-read-more">Login as root account and from My Account configure Security questions.</p> <a class="read-more" href="https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-security-challenge.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;AWS-Well-Architected-Framework-Security-Pillar: SEC03-BP03, SEC10-BP01
+
+&#x2022;CIS-1.4: 1.3
+
+&#x2022;CIS-1.5: 1.3
+
+&#x2022;CIS-2.0: 1.3
+
+&#x2022;ENS-RD2022: op.ext.7.aws.am.1
+</p></td>
+                </tr>
+                
+               </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- Table search and paginator -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"
+        integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd"
+        crossorigin="anonymous"></script>
+    <!-- https://datatables.net/download/index with jQuery, DataTables, Buttons, SearchPanes, and Select //-->
+    <script type="text/javascript"
+        src="https://cdn.datatables.net/v/dt/jqc-1.12.4/dt-1.10.25/b-1.7.1/sp-1.4.0/sl-1.3.3/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Initialise the table with 50 rows, and some search/filtering panes
+            $('#findingsTable').DataTable({
+                responsive: true,
+                // Show 25, 50, 100 and All records
+                lengthChange: true,
+                lengthMenu: [[25, 50, 100, -1], [25, 50, 100, "All"]],
+                searchPanes: {
+                    cascadePanes: true,
+                    viewTotal: true,
+                },
+                dom: 'Blfrtip',
+                language: {
+                    // To enable a filter button instead of the filter row
+                    searchPanes: {
+                        clearMessage: 'Clear Filters',
+                        collapse: { 0: 'Filters', _: 'Filters (%d)' },
+                        initCollapsed: true
+
+                    }
+                },
+                buttons: [
+                    {
+                        extend: 'searchPanes',
+                        config: {
+                            cascadePanes: true,
+                            viewTotal: true,
+                            orderable: false
+                        }
+                    }
+                ],
+                columnDefs: [
+                    {
+                        searchPanes: {
+                            show: true,
+                            pagingType: 'numbers',
+                            searching: true
+                        },
+                        // Show all filters
+                        targets: [0, 1, 2, 3, 5, 7]
+                    }
+                ]
+            });
+            var maxLength = 30;
+            // ReadMore ReadLess
+            $(".show-read-more").each(function () {
+                var myStr = $(this).text();
+                if ($.trim(myStr).length > maxLength) {
+                    var newStr = myStr.substring(0, maxLength);
+                    var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                    $(this).empty().html(newStr);
+                    $(this).append(' <a href="javascript:void(0);" class="read-more">read more...</a>');
+                    $(this).append('<span class="more-text">' + removedStr + '</span>');
+                }
+            });
+            $(".read-more").click(function () {
+                $(this).siblings(".more-text").contents().unwrap();
+                $(this).remove();
+            });
+        });
+    </script>
+</body>
+
+</html>

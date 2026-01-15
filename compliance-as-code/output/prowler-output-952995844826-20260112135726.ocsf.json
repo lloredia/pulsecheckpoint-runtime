@@ -1,0 +1,2023 @@
+[{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-ap-northeast-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "ap-northeast-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "ap-northeast-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-ap-northeast-2-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "ap-northeast-2",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "ap-northeast-2",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-ap-northeast-3-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "ap-northeast-3",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "ap-northeast-3",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-ap-south-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "ap-south-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "ap-south-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-ap-southeast-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "ap-southeast-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "ap-southeast-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-ap-southeast-2-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "ap-southeast-2",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "ap-southeast-2",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-ca-central-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "ca-central-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "ca-central-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-eu-central-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "eu-central-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "eu-central-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-eu-north-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "eu-north-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "eu-north-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-eu-west-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "eu-west-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "eu-west-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-eu-west-2-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "eu-west-2",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "eu-west-2",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-eu-west-3-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "eu-west-3",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "eu-west-3",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-sa-east-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "sa-east-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "sa-east-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-us-east-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "us-east-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "us-east-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-us-east-2-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "us-east-2",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "us-east-2",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-us-west-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "us-west-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "us-west-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Check if IAM Access Analyzer is enabled",
+        "desc": "Check if IAM Access Analyzer is enabled",
+        "supporting_data": {
+            "Risk": "AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, that are shared with an external entity. This lets you identify unintended access to your resources and data, which is a security risk. IAM Access Analyzer uses a form of mathematical analysis called automated reasoning, which applies logic and mathematical inference to determine all possible access paths allowed by a resource policy.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "aws accessanalyzer create-analyzer --analyzer-name <NAME> --type <ACCOUNT|ORGANIZATION>",
+                "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+            ],
+            "desc": "Enable IAM Access Analyzer for all accounts, create analyzer and take action over it is recommendations (IAM Access Analyzer is available at no additional cost)."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html",
+        "uid": "prowler-aws-accessanalyzer_enabled-952995844826-us-west-2-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "accessanalyzer"
+            },
+            "region": "us-west-2",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [
+            "CIS-1.4: 1.20",
+            "CIS-1.5: 1.20",
+            "CIS-2.0: 1.20"
+        ],
+        "status_detail": "IAM Access Analyzer in account 952995844826 is not enabled."
+    },
+    "message": "IAM Access Analyzer in account 952995844826 is not enabled.",
+    "severity_id": 2,
+    "severity": "Low",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "us-west-2",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "accessanalyzer_enabled",
+                "uid": "accessanalyzer_enabled",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Maintain current contact details.",
+        "desc": "Maintain current contact details.",
+        "supporting_data": {
+            "Risk": "Ensure contact email and telephone details for AWS accounts are current and map to more than one individual in your organization. An AWS account supports a number of contact details; and AWS will use these to contact the account owner if activity judged to be in breach of Acceptable Use Policy. If an AWS account is observed to be behaving in a prohibited or suspicious manner; AWS will attempt to contact the account owner by email and phone using the contact details listed. If this is unsuccessful and the account behavior needs urgent mitigation; proactive measures may be taken; including throttling of traffic between the account exhibiting suspicious behavior and the AWS API endpoints and the Internet. This will result in impaired service to and from the account in question.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "No command available.",
+                "https://docs.bridgecrew.io/docs/iam_18-maintain-contact-details#aws-console",
+                "https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact.html"
+            ],
+            "desc": "Using the Billing and Cost Management console complete contact details."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "",
+        "uid": "prowler-aws-account_maintain_current_contact_details-952995844826-us-east-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "account"
+            },
+            "region": "us-east-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "Manual check: Login to the AWS Console. Choose your account name on the top right of the window -> My Account -> Contact Information.",
+    "compliance": {
+        "status": "Unknown",
+        "requirements": [
+            "AWS-Well-Architected-Framework-Security-Pillar: SEC03-BP03, SEC10-BP01",
+            "CIS-1.4: 1.1",
+            "CIS-1.5: 1.1",
+            "CIS-2.0: 1.1",
+            "ENS-RD2022: op.ext.7.aws.am.1"
+        ],
+        "status_detail": "Manual check: Login to the AWS Console. Choose your account name on the top right of the window -> My Account -> Contact Information."
+    },
+    "message": "Manual check: Login to the AWS Console. Choose your account name on the top right of the window -> My Account -> Contact Information.",
+    "severity_id": 3,
+    "severity": "Medium",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "us-east-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "account_maintain_current_contact_details",
+                "uid": "account_maintain_current_contact_details",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 0,
+    "status": "Unknown",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Maintain different contact details to security, billing and operations.",
+        "desc": "Maintain different contact details to security, billing and operations.",
+        "supporting_data": {
+            "Risk": "Ensure contact email and telephone details for AWS accounts are current and map to more than one individual in your organization. An AWS account supports a number of contact details; and AWS will use these to contact the account owner if activity judged to be in breach of Acceptable Use Policy. If an AWS account is observed to be behaving in a prohibited or suspicious manner; AWS will attempt to contact the account owner by email and phone using the contact details listed. If this is unsuccessful and the account behavior needs urgent mitigation; proactive measures may be taken; including throttling of traffic between the account exhibiting suspicious behavior and the AWS API endpoints and the Internet. This will result in impaired service to and from the account in question.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "https://docs.bridgecrew.io/docs/iam_18-maintain-contact-details#aws-console",
+                "https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact.html"
+            ],
+            "desc": "Using the Billing and Cost Management console complete contact details."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact.html",
+        "uid": "prowler-aws-account_maintain_different_contact_details_to_security_billing_and_operations-952995844826-us-east-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "account"
+            },
+            "region": "us-east-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "SECURITY, BILLING and OPERATIONS contacts not found or they are not different between each other and between ROOT contact.",
+    "compliance": {
+        "status": "Failure",
+        "requirements": [],
+        "status_detail": "SECURITY, BILLING and OPERATIONS contacts not found or they are not different between each other and between ROOT contact."
+    },
+    "message": "SECURITY, BILLING and OPERATIONS contacts not found or they are not different between each other and between ROOT contact.",
+    "severity_id": 3,
+    "severity": "Medium",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "us-east-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "account_maintain_different_contact_details_to_security_billing_and_operations",
+                "uid": "account_maintain_different_contact_details_to_security_billing_and_operations",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 2,
+    "status": "Failure",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Ensure security contact information is registered.",
+        "desc": "Ensure security contact information is registered.",
+        "supporting_data": {
+            "Risk": "AWS provides customers with the option of specifying the contact information for accounts security team. It is recommended that this information be provided. Specifying security-specific contact information will help ensure that security advisories sent by AWS reach the team in your organization that is best equipped to respond to them.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "No command available.",
+                "https://docs.bridgecrew.io/docs/iam_19#aws-console",
+                "https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact.html"
+            ],
+            "desc": "Go to the My Account section and complete alternate contacts."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "",
+        "uid": "prowler-aws-account_security_contact_information_is_registered-952995844826-us-east-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "account"
+            },
+            "region": "us-east-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "Manual check: Login to the AWS Console. Choose your account name on the top right of the window -> My Account -> Alternate Contacts -> Security Section.",
+    "compliance": {
+        "status": "Unknown",
+        "requirements": [
+            "AWS-Foundational-Security-Best-Practices: account, acm",
+            "AWS-Well-Architected-Framework-Security-Pillar: SEC03-BP03, SEC10-BP01",
+            "CIS-1.4: 1.2",
+            "CIS-1.5: 1.2",
+            "CIS-2.0: 1.2",
+            "ENS-RD2022: op.ext.7.aws.am.1"
+        ],
+        "status_detail": "Manual check: Login to the AWS Console. Choose your account name on the top right of the window -> My Account -> Alternate Contacts -> Security Section."
+    },
+    "message": "Manual check: Login to the AWS Console. Choose your account name on the top right of the window -> My Account -> Alternate Contacts -> Security Section.",
+    "severity_id": 3,
+    "severity": "Medium",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "us-east-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "account_security_contact_information_is_registered",
+                "uid": "account_security_contact_information_is_registered",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 0,
+    "status": "Unknown",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Ensure security questions are registered in the AWS account.",
+        "desc": "Ensure security questions are registered in the AWS account.",
+        "supporting_data": {
+            "Risk": "The AWS support portal allows account owners to establish security questions that can be used to authenticate individuals calling AWS customer service for support. It is recommended that security questions be established. When creating a new AWS account a default super user is automatically created. This account is referred to as the root account. It is recommended that the use of this account be limited and highly controlled. During events in which the root password is no longer accessible or the MFA token associated with root is lost/destroyed it is possible through authentication using secret questions and associated answers to recover root login access.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "No command available.",
+                "https://docs.bridgecrew.io/docs/iam_15",
+                "https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-security-challenge.html"
+            ],
+            "desc": "Login as root account and from My Account configure Security questions."
+        },
+        "types": [
+            "IAM"
+        ],
+        "src_url": "",
+        "uid": "prowler-aws-account_security_questions_are_registered_in_the_aws_account-952995844826-us-east-1-952995844826",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "account"
+            },
+            "region": "us-east-1",
+            "name": "952995844826",
+            "uid": "arn:aws:iam::952995844826:root",
+            "labels": [],
+            "type": "Other",
+            "details": ""
+        }
+    ],
+    "status_detail": "Manual check: Login to the AWS Console as root. Choose your account name on the top right of the window -> My Account -> Configure Security Challenge Questions.",
+    "compliance": {
+        "status": "Unknown",
+        "requirements": [
+            "AWS-Well-Architected-Framework-Security-Pillar: SEC03-BP03, SEC10-BP01",
+            "CIS-1.4: 1.3",
+            "CIS-1.5: 1.3",
+            "CIS-2.0: 1.3",
+            "ENS-RD2022: op.ext.7.aws.am.1"
+        ],
+        "status_detail": "Manual check: Login to the AWS Console as root. Choose your account name on the top right of the window -> My Account -> Configure Security Challenge Questions."
+    },
+    "message": "Manual check: Login to the AWS Console as root. Choose your account name on the top right of the window -> My Account -> Configure Security Challenge Questions.",
+    "severity_id": 3,
+    "severity": "Medium",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "952995844826"
+        },
+        "region": "us-east-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2026-01-12 13:57:26.105139",
+    "metadata": {
+        "original_time": "2026-01-12T13:57:26.105139",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "account_security_questions_are_registered_in_the_aws_account",
+                "uid": "account_security_questions_are_registered_in_the_aws_account",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 0,
+    "status": "Unknown",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+}]
