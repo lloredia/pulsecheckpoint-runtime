@@ -1,0 +1,103 @@
+[package]
+name = "pulse-runtime"
+version = "0.1.0"
+edition = "2021"
+authors = ["PulseCheckpoint Contributors"]
+description = "High-performance distributed checkpoint runtime"
+license = "MIT"
+repository = "https://github.com/your-org/pulsecheckpoint-runtime"
+readme = "../README.md"
+keywords = ["distributed", "checkpoint", "grpc", "async"]
+categories = ["asynchronous", "network-programming"]
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full", "tracing"] }
+
+# gRPC
+tonic = { version = "0.10", features = ["tls", "gzip"] }
+prost = "0.12"
+prost-types = "0.12"
+
+# S3 client
+aws-sdk-s3 = "1.12"
+aws-config = { version = "1.1", features = ["behavior-version-latest"] }
+aws-credential-types = "1.1"
+aws-types = "1.1"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+toml = "0.8"
+
+# Logging and tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# Metrics
+prometheus = { version = "0.13", features = ["process"] }
+lazy_static = "1.4"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Utilities
+uuid = { version = "1.6", features = ["v4", "serde"] }
+sha2 = "0.10"
+hex = "0.4"
+base64 = "0.21"
+bytes = "1.5"
+dashmap = "5.5"
+parking_lot = "0.12"
+chrono = { version = "0.4", features = ["serde"] }
+futures = "0.3"
+async-trait = "0.1"
+tokio-stream = "0.1"
+
+# Retry logic
+backoff = { version = "0.4", features = ["tokio"] }
+
+# Configuration
+config = "0.13"
+dotenvy = "0.15"
+
+# CLI
+clap = { version = "4.4", features = ["derive", "env"] }
+
+# Health checks
+tokio-util = { version = "0.7", features = ["time"] }
+hyper = { version = "0.14", features = ["full"] }
+tonic-reflection = "0.10"
+
+[build-dependencies]
+tonic-build = "0.10"
+
+[dev-dependencies]
+tokio-test = "0.4"
+tempfile = "3.9"
+mockall = "0.12"
+criterion = { version = "0.5", features = ["async_tokio"] }
+proptest = "1.4"
+
+[[bin]]
+name = "pulse-runtime"
+path = "src/main.rs"
+
+#[[bench]]
+#name = "checkpoint_bench"
+#harness = false
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[features]
+default = []
+tls = []

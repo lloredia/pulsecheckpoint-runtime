@@ -1,0 +1,9 @@
+target/
+runtime/target/
+sdk/
+.git/
+*.md
+.env
+.gitignore
+docker-compose*.yml
+observability/
