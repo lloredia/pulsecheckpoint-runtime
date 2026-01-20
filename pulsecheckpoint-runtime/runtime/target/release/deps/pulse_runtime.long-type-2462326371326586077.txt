@@ -1,0 +1,3 @@
+tonic_reflection::server::v1::ServerReflectionServer<impl tonic_reflection::server::v1::ServerReflection>
+tonic_reflection::server::v1::ServerReflectionServer<impl tonic_reflection::server::v1::ServerReflection>: Service<hyper::Request<hyper::Body>>
+tonic_reflection::server::v1::ServerReflectionServer<impl tonic_reflection::server::v1::ServerReflection>: NamedService

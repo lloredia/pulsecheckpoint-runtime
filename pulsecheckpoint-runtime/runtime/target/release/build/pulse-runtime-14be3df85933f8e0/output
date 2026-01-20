@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=../proto/pulse.proto
+cargo:rerun-if-changed=../proto
+cargo:rerun-if-changed=../proto/pulse.proto
