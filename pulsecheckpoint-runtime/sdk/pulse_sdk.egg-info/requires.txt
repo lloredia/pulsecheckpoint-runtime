@@ -1,0 +1,11 @@
+grpcio>=1.60.0
+grpcio-tools>=1.60.0
+protobuf>=4.25.0
+
+[dev]
+pytest>=7.4.0
+pytest-asyncio>=0.23.0
+pytest-cov>=4.1.0
+mypy>=1.8.0
+ruff>=0.1.0
+black>=23.12.0
