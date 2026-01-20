@@ -1,0 +1,76 @@
+# Rust
+runtime/target/
+**/*.rs.bk
+Cargo.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+sdk/pulse/generated/*.py
+!sdk/pulse/generated/__init__.py
+
+# Virtual environments
+venv/
+ENV/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+.terraform.lock.hcl
+
+# Docker
+docker-compose.override.yml
+
+# Logs
+*.log
+logs/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Build artifacts
+*.bin
+.tmp.driveupload/

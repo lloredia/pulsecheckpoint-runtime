@@ -1,0 +1,30 @@
+# PulseCheckpoint Runtime Configuration
+# Copy to config.toml and modify as needed
+
+[server]
+grpc_addr = "0.0.0.0:50051"
+metrics_addr = "0.0.0.0:9090"
+heartbeat_interval_secs = 30
+heartbeat_timeout_secs = 90
+
+[storage]
+# MinIO local development
+endpoint = "http://localhost:9000"
+bucket = "checkpoints"
+region = "us-east-1"
+# path_prefix = "prod"  # Optional prefix for all keys
+
+# AWS S3 production
+# endpoint = "https://s3.us-east-1.amazonaws.com"
+# bucket = "my-checkpoints-bucket"
+# region = "us-east-1"
+
+[retry]
+max_attempts = 3
+initial_delay_ms = 100
+max_delay_ms = 5000
+multiplier = 2.0
+
+[logging]
+level = "info"  # trace, debug, info, warn, error
+format = "json"  # json or pretty

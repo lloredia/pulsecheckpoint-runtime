@@ -1,0 +1,249 @@
+syntax = "proto3";
+
+package pulse.v1;
+
+option java_multiple_files = true;
+option java_package = "io.pulse.v1";
+
+// PulseService provides the main API for checkpoint management
+service PulseService {
+  // Worker management
+  rpc RegisterWorker(RegisterWorkerRequest) returns (RegisterWorkerResponse);
+  rpc DeregisterWorker(DeregisterWorkerRequest) returns (DeregisterWorkerResponse);
+  rpc Heartbeat(HeartbeatRequest) returns (HeartbeatResponse);
+  rpc ListWorkers(ListWorkersRequest) returns (ListWorkersResponse);
+  
+  // Dataset management
+  rpc RegisterDataset(RegisterDatasetRequest) returns (RegisterDatasetResponse);
+  rpc ListDatasets(ListDatasetsRequest) returns (ListDatasetsResponse);
+  
+  // Checkpoint management
+  rpc SaveCheckpoint(SaveCheckpointRequest) returns (SaveCheckpointResponse);
+  rpc GetCheckpoint(GetCheckpointRequest) returns (GetCheckpointResponse);
+  rpc ListCheckpoints(ListCheckpointsRequest) returns (ListCheckpointsResponse);
+  rpc DeleteCheckpoint(DeleteCheckpointRequest) returns (DeleteCheckpointResponse);
+  
+  // Streaming checkpoint upload for large files
+  rpc SaveCheckpointStream(stream SaveCheckpointStreamRequest) returns (SaveCheckpointResponse);
+  
+  // Health check
+  rpc HealthCheck(HealthCheckRequest) returns (HealthCheckResponse);
+}
+
+// ============================================================================
+// Common types
+// ============================================================================
+
+message Metadata {
+  map<string, string> labels = 1;
+}
+
+message Timestamp {
+  int64 seconds = 1;
+  int32 nanos = 2;
+}
+
+// ============================================================================
+// Worker messages
+// ============================================================================
+
+message WorkerInfo {
+  string worker_id = 1;
+  Metadata metadata = 2;
+  WorkerStatus status = 3;
+  Timestamp registered_at = 4;
+  Timestamp last_heartbeat = 5;
+}
+
+enum WorkerStatus {
+  WORKER_STATUS_UNSPECIFIED = 0;
+  WORKER_STATUS_ACTIVE = 1;
+  WORKER_STATUS_IDLE = 2;
+  WORKER_STATUS_UNHEALTHY = 3;
+  WORKER_STATUS_TERMINATED = 4;
+}
+
+message RegisterWorkerRequest {
+  string worker_id = 1;
+  Metadata metadata = 2;
+}
+
+message RegisterWorkerResponse {
+  bool success = 1;
+  string message = 2;
+  WorkerInfo worker = 3;
+}
+
+message DeregisterWorkerRequest {
+  string worker_id = 1;
+}
+
+message DeregisterWorkerResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message HeartbeatRequest {
+  string worker_id = 1;
+  WorkerStatus status = 2;
+  Metadata metadata = 3;  // Optional status update
+}
+
+message HeartbeatResponse {
+  bool success = 1;
+  Timestamp server_time = 2;
+}
+
+message ListWorkersRequest {
+  WorkerStatus status_filter = 1;  // Optional filter
+  int32 page_size = 2;
+  string page_token = 3;
+}
+
+message ListWorkersResponse {
+  repeated WorkerInfo workers = 1;
+  string next_page_token = 2;
+  int32 total_count = 3;
+}
+
+// ============================================================================
+// Dataset messages
+// ============================================================================
+
+message DatasetInfo {
+  string dataset_id = 1;
+  string path = 2;
+  Metadata metadata = 3;
+  Timestamp registered_at = 4;
+}
+
+message RegisterDatasetRequest {
+  string dataset_id = 1;
+  string path = 2;
+  Metadata metadata = 3;
+}
+
+message RegisterDatasetResponse {
+  bool success = 1;
+  string message = 2;
+  DatasetInfo dataset = 3;
+}
+
+message ListDatasetsRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+}
+
+message ListDatasetsResponse {
+  repeated DatasetInfo datasets = 1;
+  string next_page_token = 2;
+  int32 total_count = 3;
+}
+
+// ============================================================================
+// Checkpoint messages
+// ============================================================================
+
+message CheckpointInfo {
+  string checkpoint_id = 1;
+  string worker_id = 2;
+  string storage_path = 3;
+  int64 size_bytes = 4;
+  string checksum = 5;  // SHA-256
+  Metadata metadata = 6;
+  Timestamp created_at = 7;
+  CheckpointStatus status = 8;
+}
+
+enum CheckpointStatus {
+  CHECKPOINT_STATUS_UNSPECIFIED = 0;
+  CHECKPOINT_STATUS_PENDING = 1;
+  CHECKPOINT_STATUS_UPLOADING = 2;
+  CHECKPOINT_STATUS_COMPLETED = 3;
+  CHECKPOINT_STATUS_FAILED = 4;
+}
+
+message SaveCheckpointRequest {
+  string worker_id = 1;
+  bytes data = 2;
+  Metadata metadata = 3;
+  string idempotency_key = 4;  // For idempotent writes
+}
+
+message SaveCheckpointStreamRequest {
+  oneof request {
+    SaveCheckpointStreamHeader header = 1;
+    bytes chunk = 2;
+  }
+}
+
+message SaveCheckpointStreamHeader {
+  string worker_id = 1;
+  int64 total_size = 2;
+  Metadata metadata = 3;
+  string idempotency_key = 4;
+}
+
+message SaveCheckpointResponse {
+  bool success = 1;
+  string message = 2;
+  CheckpointInfo checkpoint = 3;
+}
+
+message GetCheckpointRequest {
+  string checkpoint_id = 1;
+  bool include_data = 2;  // If true, return checkpoint data
+}
+
+message GetCheckpointResponse {
+  CheckpointInfo checkpoint = 1;
+  bytes data = 2;  // Only populated if include_data was true
+}
+
+message ListCheckpointsRequest {
+  string worker_id = 1;  // Optional filter by worker
+  int32 page_size = 2;
+  string page_token = 3;
+  CheckpointStatus status_filter = 4;
+}
+
+message ListCheckpointsResponse {
+  repeated CheckpointInfo checkpoints = 1;
+  string next_page_token = 2;
+  int32 total_count = 3;
+}
+
+message DeleteCheckpointRequest {
+  string checkpoint_id = 1;
+}
+
+message DeleteCheckpointResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+// ============================================================================
+// Health check messages
+// ============================================================================
+
+message HealthCheckRequest {}
+
+message HealthCheckResponse {
+  ServiceStatus status = 1;
+  string version = 2;
+  Timestamp uptime = 3;
+  map<string, ComponentHealth> components = 4;
+}
+
+enum ServiceStatus {
+  SERVICE_STATUS_UNSPECIFIED = 0;
+  SERVICE_STATUS_HEALTHY = 1;
+  SERVICE_STATUS_DEGRADED = 2;
+  SERVICE_STATUS_UNHEALTHY = 3;
+}
+
+message ComponentHealth {
+  ServiceStatus status = 1;
+  string message = 2;
+  Timestamp last_check = 3;
+}
