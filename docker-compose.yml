@@ -1,0 +1,86 @@
+# Local stack: runtime, MinIO, Prometheus, and Grafana.
+# Copy .env.example to .env before `docker compose up`. No AWS account keys belong in that file.
+# The runtime container receives the MinIO root identity through the AWS SDK default chain.
+
+services:
+  runtime:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "50051:50051"
+      - "9090:9090"
+    environment:
+      PULSE_GRPC_ADDR: 0.0.0.0:50051
+      PULSE_METRICS_ADDR: 0.0.0.0:9090
+      PULSE_LOG_LEVEL: info
+      PULSE_S3_ENDPOINT: http://minio:9000
+      PULSE_S3_BUCKET: ${PULSE_S3_BUCKET:?set PULSE_S3_BUCKET}
+      PULSE_S3_REGION: ${PULSE_S3_REGION:?set PULSE_S3_REGION}
+      PULSE_S3_FORCE_PATH_STYLE: ${PULSE_S3_FORCE_PATH_STYLE:-true}
+      AWS_ACCESS_KEY_ID: ${MINIO_ROOT_USER:?set MINIO_ROOT_USER}
+      AWS_SECRET_ACCESS_KEY: ${MINIO_ROOT_PASSWORD:?set MINIO_ROOT_PASSWORD}
+      AWS_EC2_METADATA_DISABLED: "true"
+      AWS_REGION: ${PULSE_S3_REGION:?set PULSE_S3_REGION}
+    depends_on:
+      minio:
+        condition: service_healthy
+    restart: on-failure
+
+  minio:
+    build:
+      context: .
+      dockerfile: docker/minio.Dockerfile
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:?set MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:?set MINIO_ROOT_PASSWORD}
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:9000/minio/health/live"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    ports:
+      - "9091:9090"
+    volumes:
+      - ./observability/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --web.enable-lifecycle
+    depends_on:
+      - runtime
+
+  grafana:
+    image: grafana/grafana:11.3.1
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:?set GRAFANA_ADMIN_USER}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?set GRAFANA_ADMIN_PASSWORD}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+    volumes:
+      - ./observability/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./observability/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana-data:/var/lib/grafana
+    depends_on:
+      - prometheus
+
+networks:
+  default:
+    name: pulse-network
+
+volumes:
+  minio-data:
+  prometheus-data:
+  grafana-data:
