@@ -1,0 +1,12 @@
+.git
+target
+runtime/target
+**/.env
+!**/.env.example
+**/__pycache__
+**/*.pyc
+.venv
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example

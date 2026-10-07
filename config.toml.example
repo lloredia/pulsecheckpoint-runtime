@@ -1,0 +1,25 @@
+# Copy to config.toml and pass --config config.toml.
+# Leave endpoint unset to use the AWS regional S3 endpoint.
+# Do not put access keys in this file.
+
+[server]
+grpc_addr = "0.0.0.0:50051"
+metrics_addr = "0.0.0.0:9090"
+heartbeat_interval_secs = 30
+heartbeat_timeout_secs = 90
+
+[storage]
+endpoint = "http://127.0.0.1:9000"
+bucket = "checkpoints"
+region = "us-east-1"
+force_path_style = true
+
+[retry]
+max_attempts = 3
+initial_delay_ms = 100
+max_delay_ms = 5000
+multiplier = 2.0
+
+[logging]
+level = "info"
+format = "json"

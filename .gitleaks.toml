@@ -1,0 +1,15 @@
+title = "pulsecheckpoint local placeholders"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Local MinIO and Grafana placeholders. These are not cloud credentials."
+regexes = [
+  '''localdev-secret''',
+  '''localdev-change-me''',
+  '''change-me''',
+]
+paths = [
+  '''(^|/)README\.md$''',
+]
